@@ -1,95 +1,143 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Plus_Jakarta_Sans, Poppins } from "next/font/google";
+
+import profilePic from "../../public/profile-pic.jpg";
+import typescript from "../../public/icons/typescript.svg";
+import angular from "../../public/icons/angular.svg";
+import nodejs from "../../public/icons/nodejs.svg";
+import reactjs from "../../public/icons/reactjs.svg";
+import aws from "../../public/icons/aws.svg";
+import sass from "../../public/icons/sass.svg";
+import webpack from "../../public/icons/webpack.svg";
+import npm from "../../public/icons/npm.svg";
+import jest from "../../public/icons/jest.svg";
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const poppinsBold = Poppins({
+  weight: "800",
+  subsets: ["latin"],
+  display: "swap",
+});
+const poppinsSemiBold = Poppins({
+  weight: "600",
+  subsets: ["latin"],
+  display: "swap",
+});
+const poppinsLight = Poppins({
+  weight: "300",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const NavBar = () => {
+  return (
+    <nav className={`${plusJakartaSans.className} ${styles.navBar}`}>
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#art">Art</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  );
+};
 
 export default function Home() {
+  const logoSize = 109.2;
   return (
     <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+      <NavBar />
+      <div className={styles.content}>
+        <div className={styles.profilePicBorder}>
+          <Image
+            src={profilePic}
+            alt="Picture of the author (Kyle Watson)"
+            className={styles.profilePic}
+            width={130}
+            height={130}
+          />
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+        <p className={`${styles.heroDescription} ${poppinsBold.className}`}>
+          I write code and it is{" "}
+          <span className={styles.fancyText}>absolutely gorgeous!</span>
+        </p>
+        <p className={`${poppinsLight.className} ${styles.description}`}>
+          I am a full stack developer, passionate about clean and test-driven
+          code. I have skills in TypeScript, Node.js, Angular, React, and AWS. I
+          can implement UI designs, create REST APIs and develop CI/CD
+          pipelines.
+        </p>
+        <section
+          className={`${styles.callToAction} ${poppinsSemiBold.className}`}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+          <a href="#mailto">Get In Touch</a>
+          <a href="#mailto">Download CV</a>
+        </section>
+        <label
+          className={`${styles.experienceLabel} ${poppinsSemiBold.className}`}
         >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+          Experience with
+        </label>
+        <section className={styles.logos}>
+          <Image
+            src={typescript}
+            alt="The TypeScript logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={angular}
+            alt="The Angular logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={nodejs}
+            alt="The NodeJS logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={reactjs}
+            alt="The ReactJS logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={aws}
+            alt="The AWS (Amazon Web Service) logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={sass}
+            alt="The Sass logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={npm}
+            alt="The NPM logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={webpack}
+            alt="The Webpack logo"
+            width={logoSize}
+            height={logoSize}
+          />
+          <Image
+            src={jest}
+            alt="The Jest logo"
+            width={logoSize}
+            height={logoSize}
+          />
+        </section>
       </div>
     </main>
-  )
+  );
 }
