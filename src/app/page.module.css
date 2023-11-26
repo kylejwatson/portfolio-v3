@@ -3,13 +3,22 @@
   --color-bot: #ffb03a;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em 28em 2em 31em;
+  background-color: #222222;
+}
+
+.title {
+  font-size: 1.3em;
+}
+
 .navBar {
   font-size: 0.8em;
   display: flex;
   justify-content: right;
   align-items: center;
-  padding: 2em 35em;
-  background-color: #222222;
   letter-spacing: 0.02em;
 }
 
@@ -18,13 +27,15 @@
 }
 
 .content {
-  height: 100%;
-  padding: 0 30em;
   background-color: #161513;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+}
+
+.intro {
+  padding: 0 30em;
 }
 
 .profilePicBorder {
@@ -78,11 +89,50 @@
 .experienceLabel {
   font-size: 1.3em;
   text-transform: uppercase;
-  margin: 4em 0 0;
+  margin: 4em 0 1em;
   letter-spacing: 0.12em;
   color: #c5c5c5;
 }
 
 .logos {
   color: #c5c5c5;
+}
+
+.detail {
+  padding: 0 20.5em;
+}
+
+.projectLabel {
+  font-size: 2.3em;
+  margin: 1em 0 2em;
+  text-transform: uppercase;
+}
+
+.projects {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.project {
+  overflow: hidden;
+  background-color: #2a2a2a;
+  border-radius: 1.2em;
+  width: 390px;
+  text-align: left;
+}
+
+.project > figcaption {
+  padding: 0.8em 1.8em;
+}
+
+.project h3 {
+  color: white;
+  font-size: 1.2em;
+  margin-bottom: 0.4em;
+}
+
+.project p {
+  color: #c5c5c5;
+  font-size: 0.7em;
 }

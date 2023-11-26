@@ -13,12 +13,15 @@ import webpack from "../../public/icons/webpack.svg";
 import npm from "../../public/icons/npm.svg";
 import jest from "../../public/icons/jest.svg";
 
+import studioDE from "../../public/projects/digital-editor.png";
+import jet from "../../public/projects/jet.png";
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
 });
 
-const poppinsBold = Poppins({
+const poppinsExtraBold = Poppins({
   weight: "800",
   subsets: ["latin"],
   display: "swap",
@@ -34,23 +37,23 @@ const poppinsLight = Poppins({
   display: "swap",
 });
 
-const NavBar = () => {
-  return (
-    <nav className={`${plusJakartaSans.className} ${styles.navBar}`}>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#art">Art</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  );
-};
-
 export default function Home() {
   const logoSize = 109.2;
   return (
     <main className={styles.main}>
-      <NavBar />
-      <div className={styles.content}>
+      <header className={`${poppinsLight.className} ${styles.header}`}>
+        <h1 className={styles.title}>
+          K.
+          <mark className={styles.fancyText}>Watson</mark>
+        </h1>
+        <nav className={`${plusJakartaSans.className} ${styles.navBar}`}>
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#art">Art</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <section className={`${styles.intro} ${styles.content}`}>
         <div className={styles.profilePicBorder}>
           <Image
             src={profilePic}
@@ -60,9 +63,11 @@ export default function Home() {
             height={130}
           />
         </div>
-        <p className={`${styles.heroDescription} ${poppinsBold.className}`}>
+        <p
+          className={`${styles.heroDescription} ${poppinsExtraBold.className}`}
+        >
           I write code and it is{" "}
-          <span className={styles.fancyText}>absolutely gorgeous!</span>
+          <mark className={styles.fancyText}>absolutely gorgeous!</mark>
         </p>
         <p className={`${poppinsLight.className} ${styles.description}`}>
           I am a full stack developer, passionate about clean and test-driven
@@ -76,11 +81,11 @@ export default function Home() {
           <a href="#mailto">Get In Touch</a>
           <a href="#mailto">Download CV</a>
         </section>
-        <label
+        <h2
           className={`${styles.experienceLabel} ${poppinsSemiBold.className}`}
         >
           Experience with
-        </label>
+        </h2>
         <section className={styles.logos}>
           <Image
             src={typescript}
@@ -137,7 +142,44 @@ export default function Home() {
             height={logoSize}
           />
         </section>
-      </div>
+      </section>
+      <section className={`${styles.detail} ${styles.content}`}>
+        <h2
+          className={`${poppinsExtraBold.className} ${styles.projectLabel} ${styles.fancyText}`}
+        >
+          Projects
+        </h2>
+        <div className={styles.projects}>
+          <figure className={styles.project}>
+            <Image
+              src={studioDE}
+              width={390}
+              height={235}
+              alt="Screenshot of the WoodWing Studio application"
+            />
+            <figcaption>
+              <p className={poppinsSemiBold.className}>
+                An advanced WYSIWYG article editor
+              </p>
+              <h3 className={poppinsExtraBold.className}>WoodWing Studio</h3>
+            </figcaption>
+          </figure>
+          <figure className={styles.project}>
+            <Image
+              src={jet}
+              width={390}
+              height={235}
+              alt="Screenshot of the SamsonVT Core application"
+            />
+            <figcaption>
+              <p className={poppinsSemiBold.className}>
+                An interactive, real-time 3D parts catalogue and work manual
+              </p>
+              <h3 className={poppinsExtraBold.className}>SamsonCORE</h3>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </main>
   );
 }
