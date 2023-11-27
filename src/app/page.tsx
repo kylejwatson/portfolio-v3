@@ -20,6 +20,10 @@ import devoteam from "../../public/logos/devoteam.svg";
 import woodwing from "../../public/logos/woodwing.svg";
 import samsonvt from "../../public/logos/samsonvt.svg";
 
+import email from "../../public/icons/email.svg";
+import github from "../../public/logos/github.svg";
+import linkedin from "../../public/logos/linkedin.svg";
+
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
@@ -277,6 +281,17 @@ export default function Home() {
           </article>
         </section>
       </main>
+      <footer className={styles.footer}>
+        <h2 className={poppinsBold.className}>Contact</h2>
+        <div>
+          <Image src={email} alt="" width={17} height={17} />
+          <span className={poppinsSemiBold.className}>mail@watsonk.me</span>
+        </div>
+        <nav>
+          <Image src={github} alt="" width={18} height={18} />
+          <Image src={linkedin} alt="" width={18} height={18} />
+        </nav>
+      </footer>
     </div>
   );
 }

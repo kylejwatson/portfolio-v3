@@ -113,7 +113,8 @@
 
 .projects {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1em;
   width: 100%;
   margin-bottom: 3em;
 }
@@ -162,4 +163,28 @@
   color: white;
   font-size: 1.4em;
   margin: 0 auto 0 1em;
+}
+
+.footer {
+  padding: 4em 20.5em;
+  background-color: #191919;
+}
+
+.footer h2 {
+  font-size: 1.4em;
+  margin-bottom: 1em;
+}
+
+.footer > div {
+  color: #c5c5c5;
+  font-size: 0.9em;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-bottom: 3em;
+}
+
+.footer > nav {
+  display: flex;
+  gap: 1em;
 }
