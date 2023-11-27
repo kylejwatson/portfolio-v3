@@ -175,7 +175,7 @@
   margin-bottom: 1em;
 }
 
-.footer > div {
+.footer > a {
   color: #c5c5c5;
   font-size: 0.9em;
   display: flex;

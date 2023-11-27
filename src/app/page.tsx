@@ -66,12 +66,12 @@ export default function Home() {
         </h1>
         <nav className={`${plusJakartaSans.className} ${styles.navBar}`}>
           <a href="#about">About</a>
+          <a href="#projects">Projects</a>
           <a href="#experience">Experience</a>
-          <a href="#art">Art</a>
           <a href="#contact">Contact</a>
         </nav>
       </header>
-      <main>
+      <main id="about">
         <section className={`${styles.intro} ${styles.content}`}>
           <div className={styles.profilePicBorder}>
             <Image
@@ -97,8 +97,10 @@ export default function Home() {
           <article
             className={`${styles.callToAction} ${poppinsSemiBold.className}`}
           >
-            <a href="#mailto">Get In Touch</a>
-            <a href="#mailto">Download CV</a>
+            <a href="mailto:mail@watsonk.me">Get In Touch</a>
+            <a href="/files/cvpdf.pdf" download>
+              Download CV
+            </a>
           </article>
           <h2
             className={`${styles.experienceLabel} ${poppinsSemiBold.className}`}
@@ -165,6 +167,7 @@ export default function Home() {
         <section className={`${styles.detail} ${styles.content}`}>
           <h2
             className={`${poppinsExtraBold.className} ${styles.subheading} ${styles.fancyText}`}
+            id="projects"
           >
             Projects
           </h2>
@@ -200,6 +203,7 @@ export default function Home() {
           </div>
           <h2
             className={`${poppinsExtraBold.className} ${styles.subheading} ${styles.greyFancyText}`}
+            id="experience"
           >
             Experience
           </h2>
@@ -281,15 +285,19 @@ export default function Home() {
           </article>
         </section>
       </main>
-      <footer className={styles.footer}>
+      <footer className={styles.footer} id="contact">
         <h2 className={poppinsBold.className}>Contact</h2>
-        <div>
+        <a href="mailto:mail@watsonk.me">
           <Image src={email} alt="" width={17} height={17} />
           <span className={poppinsSemiBold.className}>mail@watsonk.me</span>
-        </div>
+        </a>
         <nav>
-          <Image src={github} alt="" width={18} height={18} />
-          <Image src={linkedin} alt="" width={18} height={18} />
+          <a href="https://github.com/kylejwatson/">
+            <Image src={github} alt="" width={18} height={18} />
+          </a>
+          <a href="https://www.linkedin.com/in/kylejwatsonbsc/">
+            <Image src={linkedin} alt="" width={18} height={18} />
+          </a>
         </nav>
       </footer>
     </div>
