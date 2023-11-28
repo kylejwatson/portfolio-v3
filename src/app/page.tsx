@@ -23,6 +23,8 @@ import samsonvt from "../../public/logos/samsonvt.svg";
 import email from "../../public/icons/email.svg";
 import github from "../../public/logos/github.svg";
 import linkedin from "../../public/logos/linkedin.svg";
+import { useRef } from "react";
+import { JetAnimation } from "./jet-animation";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -187,12 +189,7 @@ export default function Home() {
               </figcaption>
             </figure>
             <figure className={styles.project}>
-              <Image
-                src={jet}
-                width={390}
-                height={235}
-                alt="Screenshot of the SamsonVT Core application"
-              />
+              <JetAnimation />
               <figcaption>
                 <p className={poppinsSemiBold.className}>
                   An interactive, real-time 3D parts catalogue and work manual

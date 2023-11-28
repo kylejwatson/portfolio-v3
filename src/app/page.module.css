@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 1.6em 28em 1.6em 31em;
   background-color: #222222;
+  z-index: 1;
 }
 
 .title {
