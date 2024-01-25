@@ -22,10 +22,11 @@
   justify-content: right;
   align-items: center;
   letter-spacing: 0.02em;
+  gap: 4em;
 }
 
 .navBar > a {
-  padding: 0 2em;
+  padding: 0;
 }
 
 .content {
@@ -187,4 +188,18 @@
 .footer > nav {
   display: flex;
   gap: 1em;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .header {
+    display: block;
+    position: initial;
+    padding: 1em;
+    background-color: #161513;
+  }
+
+  .navBar {
+    margin-top: 1em;
+    justify-content: space-between;
+  }
 }
